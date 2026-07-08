@@ -1,0 +1,21 @@
+[package]
+name = "rotten-protocol"
+version.workspace = true
+edition.workspace = true
+license.workspace = true
+
+[dependencies]
+base64 = { workspace = true }
+bytes = { workspace = true }
+hex = { workspace = true }
+plist = { workspace = true }
+rand = { workspace = true }
+reqwest = { workspace = true }
+rotten-core = { workspace = true }
+rotten-crypto = { workspace = true }
+rotten-pairing = { workspace = true }
+serde = { workspace = true }
+serde_json = { workspace = true }
+tokio = { workspace = true }
+tracing = { workspace = true }
+uuid = { workspace = true }

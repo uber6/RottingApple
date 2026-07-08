@@ -1,0 +1,36 @@
+[package]
+name = "rotten-app"
+version.workspace = true
+edition.workspace = true
+license.workspace = true
+
+[[bin]]
+name = "rottingapple"
+path = "src/main.rs"
+
+[dependencies]
+anyhow = { workspace = true }
+clap = { workspace = true }
+rotten-capture = { workspace = true }
+rotten-core = { workspace = true }
+rotten-discovery = { workspace = true }
+rotten-pairing = { workspace = true }
+rotten-protocol = { workspace = true }
+rotten-video = { workspace = true }
+serde_json = { workspace = true }
+plist = { workspace = true }
+tokio = { workspace = true }
+tracing = { workspace = true }
+tracing-subscriber = { workspace = true }
+
+[features]
+default = ["encode-source"]
+encode-source = ["rotten-video/software-encode-source"]
+encode-dll = ["rotten-video/software-encode-dll"]
+
+[package.metadata.deb]
+name = "rottingapple"
+maintainer = "RottingApple Contributors"
+copyright = "2026, RottingApple Contributors"
+license-file = ["../LICENSE", "0"]
+extended-description = "AirPlay screen mirroring sender for PC to Apple TV"

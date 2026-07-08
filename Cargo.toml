@@ -1,0 +1,64 @@
+[workspace]
+resolver = "2"
+members = [
+    "crates/rotten-core",
+    "crates/rotten-discovery",
+    "crates/rotten-crypto",
+    "crates/rotten-pairing",
+    "crates/rotten-protocol",
+    "crates/rotten-video",
+    "crates/rotten-capture",
+    "crates/rotten-app",
+    "crates/rotten-probe",
+]
+
+[workspace.package]
+version = "0.1.0"
+edition = "2024"
+license = "MIT OR Apache-2.0"
+repository = "https://github.com/deciel/RottingApple"
+
+[workspace.dependencies]
+anyhow = "1"
+async-trait = "0.1"
+base64 = "0.22"
+bytes = "1"
+chacha20 = { version = "0.10", features = ["legacy"] }
+chacha20poly1305 = "0.10"
+poly1305 = { version = "0.8", features = ["std"] }
+clap = { version = "4", features = ["derive"] }
+dirs = "6"
+futures = "0.3"
+hex = "0.4"
+hkdf = "0.12"
+hmac = "0.12"
+log = "0.4"
+mdns-sd = "0.13"
+num-bigint = "0.4"
+num-traits = "0.2"
+p256 = { version = "0.13", features = ["ecdh"] }
+plist = "1"
+rand = "0.8"
+reqwest = { version = "0.12", default-features = false, features = ["rustls-tls", "json"] }
+serde = { version = "1", features = ["derive"] }
+serde_json = "1"
+sha2 = "0.10"
+sha1 = "0.10"
+aes = "0.8"
+aes-gcm = "0.10"
+ctr = "0.9"
+ed25519-dalek = { version = "2", features = ["rand_core"] }
+thiserror = "2"
+tokio = { version = "1", features = ["full"] }
+tracing = "0.1"
+tracing-subscriber = { version = "0.3", features = ["env-filter"] }
+uuid = { version = "1", features = ["v4"] }
+x25519-dalek = { version = "2", features = ["static_secrets"] }
+
+rotten-core = { path = "crates/rotten-core" }
+rotten-discovery = { path = "crates/rotten-discovery" }
+rotten-crypto = { path = "crates/rotten-crypto" }
+rotten-pairing = { path = "crates/rotten-pairing" }
+rotten-protocol = { path = "crates/rotten-protocol" }
+rotten-video = { path = "crates/rotten-video" }
+rotten-capture = { path = "crates/rotten-capture" }

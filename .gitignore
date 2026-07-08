@@ -1,0 +1,8 @@
+/target
+*.log
+debug-*.log
+.cursor/
+vendor/*.dll
+vendor/*.dll.bz2
+credentials.json
+*.o
